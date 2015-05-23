@@ -1,0 +1,199 @@
+/**
+ * Use the prototype folder for quickly styling elements
+ * Any class that has been created in the prototype process should have a "p-" prefix.
+ * When the project goes in to the build stage the prefixed classes should be considered for renaming/restructring and the prefix removed
+ */
+
+body {
+	background-color:$tertiary;
+}
+#{$heading-selectors} {
+	color:$primary;
+	font-family: $brand-face-secondary;
+}
+.wrapper {
+	max-width:87.5em;
+}
+.grid {
+	font-size:0;
+
+	> .grid__item {
+		font-size: 1rem;
+	}
+}
+.p-topbar {
+	background-color:$primary-dark;
+
+	.p-logo, .p-nav {
+		display:inline-block;
+		vertical-align: middle;
+	}
+
+	.p-logo {
+		width:40%;
+	}
+
+	.p-nav {
+		width:60%;
+		text-align:right;
+
+		ul {
+			margin-bottom:0;
+
+			li {
+				padding:$base-spacing-unit;
+
+				a {
+					color:$tertiary;
+					padding:3px;
+					transition: .1s linear;
+
+					&:hover {
+						border-bottom:2px solid $tertiary;
+						margin-bottom:-2px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.p-hero-banner {
+	background-image:url('../images/hero-bg.jpg');
+	background-size:cover;
+	display:table;
+	width:100%;
+	height:80vh;
+	min-height:300px;
+
+	.p-cta-wrap {
+		display:table-cell;
+		vertical-align: middle;
+		text-align: center;
+
+		.p-cta-wrap-inner {
+			display:inline-block;
+			padding:$base-spacing-unit * 2;
+		
+			.p-cta > h1, .p-cta > h2 {
+				color:$tertiary;
+			}
+
+			.p-cta > h1 {
+				font-size:70px;
+				margin-bottom:0;
+				text-shadow:1px 2px 1px $primary-dark;
+			}
+
+			.p-cta > h2 {
+				font-size:32px;
+				text-shadow:1px 1px 1px $primary-dark;
+			}
+
+			.p-cta-btn {
+				line-height: normal;
+				padding:12px;
+			}
+
+		}
+	}
+}
+
+.p-featured-events {
+
+	.p-featured-events-heading {
+		display:inline-block;
+	}
+	
+	.p-featured-event {
+
+		.p-featured-event-info, .p-event-cta {
+			display:inline-block;
+			width:50%;
+			vertical-align: top;
+		}
+
+		.p-event-cta {
+			text-align: right;
+		}
+
+		.p-featured-event-img {
+			height:260px;
+			width:100%;
+			margin-bottom: $base-spacing-unit/2;
+		}
+
+		.p-featured-event-title {
+			font-weight:400;
+			margin-bottom:4px;
+		}
+
+		.p-event-price {
+			font-family: $brand-face-secondary;
+		}
+
+		&:after {
+			content:"";
+			display:block;
+			width:1px;
+			height:50%;
+			border-right:1px solid red;
+		}
+	}
+}
+
+.p-featured-blogs {
+	text-align: center;
+
+	.p-featured-blog {
+		position: relative;
+		padding-right:$base-spacing-unit;
+		padding-left:$base-spacing-unit;
+
+		&:not(.p-featured-blog--last):after {
+			content:"";
+			display:block;
+			height:100%;
+			width:1px;
+			position: absolute;
+			top:0;
+			right:-$base-spacing-unit/2;
+			background:$secondary-tri-two;
+		}
+	}
+
+	.p-featured-blog-heading {
+		margin-bottom:0.4em;
+	}
+
+	.p-featured-blog-blurb {
+		margin-bottom:0.8em;
+	}
+
+	.p-featured-blogs-view-all {
+		margin-top:$base-spacing-unit;
+		text-align:center;
+	}
+}
+
+.p-footer {
+	margin-top:$base-spacing-unit;
+	padding:$base-spacing-unit;
+	background-color:$primary-dark;
+
+	.p-footer-links, .p-copyright {
+		color:white;
+	}
+
+	.p-footer-links {
+		margin:0;
+		text-align: right;
+
+		> li {
+			display:inline-block;
+			list-style: none;
+			margin-left:$base-spacing-unit/2;
+			margin-right: $base-spacing-unit/2;
+		}
+	}
+}
